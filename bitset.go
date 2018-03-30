@@ -26,7 +26,7 @@ func Initial(nBits int, bits ...int) Bitset {
 
 // Resize returns a copy of the actual Bitset, with the given capacity.
 func (bs Bitset) Resize(nBits int) Bitset {
-	nbs := make(Bitset, nBits)
+	nbs := New(nBits)
 	copy(nbs, bs)
 	return nbs
 }
